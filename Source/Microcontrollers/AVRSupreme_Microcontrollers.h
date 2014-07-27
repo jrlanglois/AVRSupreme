@@ -1,0 +1,23 @@
+#ifndef AVRS_MODULE_MICROCONTROLLERS_H
+#define AVRS_MODULE_MICROCONTROLLERS_H
+
+#ifndef AVRS_MODULE_CORE_H
+ #include "../Core/AVRSupreme_Core.h"
+#endif //AVRS_MODULE_CORE_H
+
+namespace avrs
+{
+   #ifndef AVRS_MICROCONTROLLERS_SERIAL_PORT_H
+    #include "Misc/SerialPort.h"
+   #endif //AVRS_MICROCONTROLLERS_SERIAL_PORT_H
+
+   #ifndef AVRS_MICROCONTROLLERS_MICROCONTROLLER_H
+    #include "Types/Microcontroller.h"
+   #endif //AVRS_MICROCONTROLLERS_MICROCONTROLLER_H
+
+   #ifndef AVRS_MICROCONTROLLERS_STK500_H
+    #include "Types/STK500.h"
+   #endif //AVRS_MICROCONTROLLERS_STK500_H
+}
+
+#endif //AVRS_MODULE_MICROCONTROLLERS_H

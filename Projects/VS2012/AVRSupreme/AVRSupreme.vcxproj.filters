@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Microcontrollers">
+      <UniqueIdentifier>{bf642683-e8a1-4e5f-9a01-825036cc5b99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Microcontrollers\Types">
+      <UniqueIdentifier>{c248dea0-7651-4126-8d5f-f396816ec16f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core">
+      <UniqueIdentifier>{345f3758-278b-4c54-8bf0-8a44575f384c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Architecture">
+      <UniqueIdentifier>{aacde6c3-2109-42c6-8d1f-ae14949b1de6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core\Basis">
+      <UniqueIdentifier>{ba234fc2-baa8-43e2-96bf-bdd2f916dc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Architecture\Basis">
+      <UniqueIdentifier>{2839b1f5-080e-4aed-a58b-c4c9a68e4afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\bullshit">
+      <UniqueIdentifier>{4fa28fd1-217a-4a07-88c3-0b058a42fa28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Microcontrollers\Misc">
+      <UniqueIdentifier>{16857c65-702e-450a-ad6a-748371792888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core\Memory">
+      <UniqueIdentifier>{3b9f5fca-1ec6-40af-a8eb-c30067b9e9b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Microcontrollers\Native">
+      <UniqueIdentifier>{0fa14812-4a89-4e16-a7f5-e70c25d153ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Microcontrollers\AVRSupreme_Microcontrollers.cpp">
+      <Filter>Source\Microcontrollers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Core\AVRSupreme_Core.cpp">
+      <Filter>Source\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Architecture\AVRSupreme_Architecture.cpp">
+      <Filter>Source\Architecture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\arduino.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\avr.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\avr910.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\avrftdi.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\avrftdi_tpi.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\avrpart.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\bitbang.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\buspirate.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\butterfly.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\config.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\confwin.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\crc16.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\dfu.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\fileio.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\flip1.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\flip2.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\ft245r.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\jtag3.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\jtagmkI.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\jtagmkII.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\linuxgpio.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\lists.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\main.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\par.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\pgm.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\pgm_type.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\pickit2.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\pindefs.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\ppi.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\ppiwin.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\safemode.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\ser_avrdoper.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\ser_posix.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\ser_win32.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\serbb_posix.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\serbb_win32.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\stk500.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\stk500generic.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\stk500v2.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\term.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\update.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\usb_libusb.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\usbasp.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\usbtiny.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\wiring.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\windows\giveio.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\avrdude\avrdude\windows\loaddrv.c">
+      <Filter>Source\bullshit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Microcontrollers\Native\SerialPort_Windows.cpp">
+      <Filter>Source\Microcontrollers\Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Microcontrollers\Misc\SerialPort.cpp">
+      <Filter>Source\Microcontrollers\Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\Microcontrollers\AVRSupreme_Microcontrollers.h">
+      <Filter>Source\Microcontrollers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Microcontrollers\Types\STK500.h">
+      <Filter>Source\Microcontrollers\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Microcontrollers\Types\Microcontroller.h">
+      <Filter>Source\Microcontrollers\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\AVRSupreme_Core.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Basis\PrimitiveTypes.h">
+      <Filter>Source\Core\Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Architecture\AVRSupreme_Architecture.h">
+      <Filter>Source\Architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Architecture\Basis\CompilerDefinitions.h">
+      <Filter>Source\Architecture\Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Architecture\Basis\PlatformDefinitions.h">
+      <Filter>Source\Architecture\Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Architecture\Basis\ArchitectureDefinitions.h">
+      <Filter>Source\Architecture\Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\solaris_ecpp.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\stk500.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\stk500_private.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\stk500generic.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\stk500v2.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\stk500v2_private.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\term.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\tpi.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\usbasp.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\usbdevs.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\usbtiny.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\wiring.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\arduino.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\avr910.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\avrdude.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\avrftdi.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\avrftdi_private.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\avrftdi_tpi.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\bitbang.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\buspirate.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\butterfly.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\config.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\crc16.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\dfu.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\flip1.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\flip2.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\freebsd_ppi.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\ft245r.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\jtag3.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\jtag3_private.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\jtagmkI.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\jtagmkI_private.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\jtagmkII.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\jtagmkII_private.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\libavrdude.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\linux_ppdev.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\linuxgpio.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\my_ddk_hidsdi.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\par.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\pickit2.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\ppi.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\serbb.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\avrdude\avrdude\windows\loaddrv.h">
+      <Filter>Source\bullshit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Basis\Macros.h">
+      <Filter>Source\Core\Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Microcontrollers\Misc\SerialPort.h">
+      <Filter>Source\Microcontrollers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Memory\ScopedPointer.h">
+      <Filter>Source\Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Memory\ContainerDeletePolicy.h">
+      <Filter>Source\Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Memory\Misc.h">
+      <Filter>Source\Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\AVRSMasterHeader.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
