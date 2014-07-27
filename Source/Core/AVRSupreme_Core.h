@@ -2,6 +2,8 @@
 #define AVRS_MODULE_CORE_H
 
 #include <cstring>
+#include <iostream>
+#include <sstream>
 #include <vector>
 
 #ifndef AVRS_MODULE_ARCHITECTURE_H
@@ -17,6 +19,10 @@ namespace avrs
    #ifndef AVRS_CORE_PRIMITIVE_TYPES_H
     #include "Basis/PrimitiveTypes.h"
    #endif //AVRS_CORE_PRIMITIVE_TYPES_H
+
+   #ifndef AVRS_CORE_STRING_HELPERS_H
+    #include "Basis/StringHelpers.h"
+   #endif //AVRS_CORE_STRING_HELPERS_H
 
    #ifndef AVRS_CORE_CONTAINER_DELETE_POLICY_H
     #include "Memory/ContainerDeletePolicy.h"

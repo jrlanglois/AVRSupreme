@@ -3,6 +3,7 @@
 namespace avrs
 {
    #if AVRS_P_WINDOWS
+    #include <Windows.h>
     #include "Native/SerialPort_Windows.cpp"
    #elif AVRS_P_LINUX
     #include "Native/SerialPort_Linux.cpp"

@@ -37,7 +37,7 @@ private:
 //==============================================================================
 int main()
 {
-    Console::printHelp();
+    Console::printMessage ("Listing available COM ports:");
 
     const std::vector<std::string> result (SerialPort::listAvailablePorts());
 

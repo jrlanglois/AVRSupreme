@@ -372,5 +372,8 @@
     <ClInclude Include="..\..\..\Source\AVRSMasterHeader.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Basis\StringHelpers.h">
+      <Filter>Source\Core\Basis</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

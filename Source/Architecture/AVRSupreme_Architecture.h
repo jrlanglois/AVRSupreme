@@ -1,7 +1,6 @@
 #ifndef AVRS_MODULE_ARCHITECTURE_H
 #define AVRS_MODULE_ARCHITECTURE_H
 
-#include <iostream>
 
 namespace avrs
 {

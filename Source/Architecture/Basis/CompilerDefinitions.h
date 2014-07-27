@@ -31,6 +31,9 @@
    #if (_MSC_VER >= 1800) //Visual Studio 2013
     #define AVRS_COMPILER_SUPPORTS_NOEXCEPT         1
    #endif
+
+    //Shut Visual Studio up about defining keywords
+    #define _ALLOW_KEYWORD_MACROS                   1
 #elif defined (__GNUC__)
     #define AVRS_C_GCC                              1
 

@@ -366,6 +366,7 @@
     <ClInclude Include="..\..\..\Source\Core\AVRSupreme_Core.h" />
     <ClInclude Include="..\..\..\Source\Core\Basis\Macros.h" />
     <ClInclude Include="..\..\..\Source\Core\Basis\PrimitiveTypes.h" />
+    <ClInclude Include="..\..\..\Source\Core\Basis\StringHelpers.h" />
     <ClInclude Include="..\..\..\Source\Core\Memory\ContainerDeletePolicy.h" />
     <ClInclude Include="..\..\..\Source\Core\Memory\Misc.h" />
     <ClInclude Include="..\..\..\Source\Core\Memory\ScopedPointer.h" />
