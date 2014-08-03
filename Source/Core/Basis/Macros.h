@@ -40,27 +40,11 @@
 #endif
 
 //==============================================================================
-#if AVRS_P_WINDOWS
-#include <Windows.h>
-#include <debugapi.h>
+static void outputDebugString (const std::wstring& text);
 
-static void outputDebugString (const std::wstring& text)
-{
-    OutputDebugString (text.c_str());
-}
+static void outputDebugString (const std::string& text);
 
-static void outputDebugString (const std::string& text)
-{
-    outputDebugString (std::wstring (text.begin(), text.end()));
-}
-
-static bool AVRS_CALLTYPE isRunningUnderDebugger()
-{
-    return IsDebuggerPresent() != FALSE;
-}
-#else
-    #error TODO
-#endif
+static bool AVRS_CALLTYPE isRunningUnderDebugger();
 
 //==============================================================================
 #if AVRS_DEBUG
@@ -76,7 +60,7 @@ static bool AVRS_CALLTYPE isRunningUnderDebugger()
 
         @see sassert
     */
-    #define sassertfalse              { if (juce::juce_isRunningUnderDebugger()) avrs_breakDebugger;  }
+    #define sassertfalse              { if (isRunningUnderDebugger()) avrs_breakDebugger;  }
 
     /** Platform-independent assertion macro.
 

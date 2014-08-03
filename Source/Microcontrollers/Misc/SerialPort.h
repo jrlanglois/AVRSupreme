@@ -1,11 +1,16 @@
 #ifndef AVRS_MICROCONTROLLERS_SERIAL_PORT_H
 #define AVRS_MICROCONTROLLERS_SERIAL_PORT_H
 
+/**
+
+*/
 class SerialPort
 {
 public:
+    /** Constructor */
     SerialPort();
 
+    /** Destructor */
     ~SerialPort();
 
     //==============================================================================

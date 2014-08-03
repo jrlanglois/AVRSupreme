@@ -13,8 +13,7 @@
     ScopedPointer, the old one will be automatically deleted.
 
     Important note: The class is designed to hold a pointer to an object, NOT to an array!
-    It calls delete on its payload, not delete[], so do not give it an array to hold! For
-    that kind of purpose, you should be using HeapBlock or Array instead.
+    It calls delete on its payload, not delete[], so do not give it an array to hold!
 
     A const ScopedPointer is guaranteed not to lose ownership of its object or change the
     object to which it points during its lifetime. This means that making a copy of a const
@@ -39,13 +38,13 @@ template <class ObjectType>
 class ScopedPointer
 {
 public:
-    /** Creates a ScopedPointer containing a null pointer. */
+    /** Creates a ScopedPointer containing a nullptr */
     inline ScopedPointer() noexcept :
         object (nullptr)
     {
     }
 
-    /** Creates a ScopedPointer that owns the specified object. */
+    /** Creates a ScopedPointer that owns a specified object. */
     inline ScopedPointer (ObjectType* const objectToTakePossessionOf) noexcept :
         object (objectToTakePossessionOf)
     {
@@ -55,7 +54,7 @@ public:
 
         Because a pointer can only belong to one ScopedPointer, this transfers
         the pointer from the other object to this one, and the other object is reset to
-        be a null pointer.
+        be a nullptr.
     */
     ScopedPointer (ScopedPointer& objectToTransferFrom) noexcept :
         object (objectToTransferFrom.object)
@@ -63,7 +62,16 @@ public:
         objectToTransferFrom.object = nullptr;
     }
 
+   #if AVRS_COMPILER_SUPPORTS_MOVE_SEMANTICS
+    ScopedPointer (ScopedPointer&& other) noexcept :
+        object (other.object)
+    {
+        other.object = nullptr;
+    }
+   #endif
+
     /** Destructor.
+
         This will delete the object that this ScopedPointer currently refers to.
     */
     inline ~ScopedPointer()
@@ -71,11 +79,12 @@ public:
         ContainerDeletePolicy<ObjectType>::destroy (object);
     }
 
+    //==============================================================================
     /** Changes this ScopedPointer to point to a new object.
 
         Because a pointer can only belong to one ScopedPointer, this transfers
         the pointer from the other object to this one, and the other object is reset to
-        be a null pointer.
+        be a nullptr.
 
         If this ScopedPointer already points to an object, that object
         will first be deleted.
@@ -86,7 +95,7 @@ public:
         {
             //Two ScopedPointers should never be able to refer to the same object.
             //If this happens, you must have done something dodgy!
-            jassert (object == nullptr || object != objectToTransferFrom.object);
+            sassert (object == nullptr || object != objectToTransferFrom.object);
 
             ObjectType* const oldObject = object;
             object = objectToTransferFrom.object;
@@ -117,12 +126,6 @@ public:
     }
 
    #if AVRS_COMPILER_SUPPORTS_MOVE_SEMANTICS
-    ScopedPointer (ScopedPointer&& other) noexcept :
-        object (other.object)
-    {
-        other.object = nullptr;
-    }
-
     ScopedPointer& operator= (ScopedPointer&& other) noexcept
     {
         object = other.object;
@@ -146,24 +149,32 @@ public:
 
     //==============================================================================
     /** Removes the current object from this ScopedPointer without deleting it.
-        This will return the current object, and set the ScopedPointer to a null pointer.
+
+        This will return the current object, and set the ScopedPointer to a nullptr.
     */
-    ObjectType* release() noexcept                                                  { ObjectType* const o = object; object = nullptr; return o; }
+    ObjectType* release() noexcept
+    {
+        ObjectType* const o = object;
+        object = nullptr;
+        return o;
+    }
 
     //==============================================================================
     /** Swaps this object with that of another ScopedPointer.
+
         The two objects simply exchange their pointers.
     */
-    void swapWith (ScopedPointer <ObjectType>& other) noexcept
+    void swapWith (ScopedPointer<ObjectType>& other) noexcept
     {
         //Two ScopedPointers should never be able to refer to the same object.
         //If this happens, you must have done something dodgy!
-        jassert (object != other.object || this == other.getAddress());
+        sassert (object != other.object || this == other.getAddress());
 
         std::swap (object, other.object);
     }
 
     /** If the pointer is non-null, this will attempt to return a new copy of the object that is pointed to.
+
         If the pointer is null, this will safely return a nullptr.
     */
     inline ObjectType* createCopy() const                                           { return createCopyIfNotNull (object); }
@@ -172,9 +183,11 @@ private:
     //==============================================================================
     ObjectType* object;
 
-    // (Required as an alternative to the overloaded & operator).
+    //==============================================================================
+    /** @note Required as an alternative to the overloaded & operator */
     const ScopedPointer* getAddress() const noexcept                                { return this; }
 
+    //==============================================================================
    #if ! AVRS_C_VS //Visual Studio can't deal with multiple copy constructors
     /** The copy constructors are private to stop people accidentally copying a const ScopedPointer
         (the compiler would let you do so by implicitly casting the source to its raw object pointer).
@@ -199,27 +212,30 @@ private:
 //==============================================================================
 /** Compares a ScopedPointer with another pointer.
 
-    This can be handy for checking whether this is a null pointer.
+    This can be handy for checking whether this is a nullptr.
 */
 template <class ObjectType>
 bool operator== (const ScopedPointer<ObjectType>& pointer1, ObjectType* const pointer2) noexcept
 {
-    return static_cast <ObjectType*> (pointer1) == pointer2;
+    return static_cast<ObjectType*> (pointer1) == pointer2;
 }
 
 /** Compares a ScopedPointer with another pointer.
 
-    This can be handy for checking whether this is a null pointer.
+    This can be handy for checking whether this is a nullptr.
 */
 template <class ObjectType>
 bool operator!= (const ScopedPointer<ObjectType>& pointer1, ObjectType* const pointer2) noexcept
 {
-    return static_cast <ObjectType*> (pointer1) != pointer2;
+    return static_cast<ObjectType*> (pointer1) != pointer2;
 }
 
 //==============================================================================
-// NB: This is just here to prevent any silly attempts to call deleteAndZero() on a ScopedPointer.
+/** @note This is just here to prevent any silly attempts to call deleteAndZero() on a ScopedPointer. */
 template <typename Type>
-void deleteAndZero (ScopedPointer<Type>&) { static_assert (sizeof (Type) == 12345); }
+void deleteAndZero (ScopedPointer<Type>&)
+{
+    static_assert (sizeof (Type) == 12345);
+}
 
 #endif //AVRS_CORE_SCOPED_POINTER_H

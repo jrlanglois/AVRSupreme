@@ -1,9 +1,20 @@
 #include "AVRSupreme_Microcontrollers.h"
 
+#if AVRS_P_WINDOWS
+    #include <Windows.h>
+#elif AVRS_P_LINUX
+    #error
+#elif AVRS_P_MACINTOSH
+    #error
+#elif AVRS_P_IOS
+    #error
+#elif AVRS_P_ANDROID
+    #error
+#endif
+
 namespace avrs
 {
    #if AVRS_P_WINDOWS
-    #include <Windows.h>
     #include "Native/SerialPort_Windows.cpp"
    #elif AVRS_P_LINUX
     #include "Native/SerialPort_Linux.cpp"
@@ -13,9 +24,8 @@ namespace avrs
     #include "Native/SerialPort_iOS.cpp"
    #elif AVRS_P_ANDROID
     #include "Native/SerialPort_Android.cpp"
-   #else
-    #error Unknown platform!
    #endif
 
     #include "Misc/SerialPort.cpp"
+    #include "Types/Microcontroller.cpp"
 }

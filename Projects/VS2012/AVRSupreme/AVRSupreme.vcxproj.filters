@@ -35,6 +35,9 @@
     <Filter Include="Source\Microcontrollers\Native">
       <UniqueIdentifier>{0fa14812-4a89-4e16-a7f5-e70c25d153ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Core\Native">
+      <UniqueIdentifier>{303bdc44-9dba-48d3-b138-a40099e9f8ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\Main.cpp">
@@ -195,6 +198,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Microcontrollers\Misc\SerialPort.cpp">
       <Filter>Source\Microcontrollers\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Microcontrollers\Types\Microcontroller.cpp">
+      <Filter>Source\Microcontrollers\Types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -374,6 +380,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Core\Basis\StringHelpers.h">
       <Filter>Source\Core\Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Core\Native\Debug_Windows.cpp">
+      <Filter>Source\Core\Native</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

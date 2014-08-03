@@ -29,32 +29,32 @@ typedef unsigned long long uint64;
     /** A signed integer type that's guaranteed to be large enough
         to hold a pointer without truncating it.
     */
-    typedef int64 pointer_sized_int;
+    typedef int64 pointerSizedInt;
 
     /** An unsigned integer type that's guaranteed to be large enough
         to hold a pointer without truncating it.
     */
-    typedef uint64 pointer_sized_uint;
+    typedef uint64 pointerSizedUint;
 #elif AVRS_C_VS
     /** A signed integer type that's guaranteed to be large enough
         to hold a pointer without truncating it.
     */
-    typedef __w64 int pointer_sized_int;
+    typedef __w64 int pointerSizedInt;
 
     /** An unsigned integer type that's guaranteed to be large enough
         to hold a pointer without truncating it.
     */
-    typedef __w64 uint32 pointer_sized_uint;
+    typedef __w64 uint32 pointerSizedUint;
 #else
     /** A signed integer type that's guaranteed to be large enough
         to hold a pointer without truncating it.
     */
-    typedef int pointer_sized_int;
+    typedef int pointerSizedInt;
 
     /** An unsigned integer type that's guaranteed to be large enough
         to hold a pointer without truncating it.
     */
-    typedef uint32 pointer_sized_uint;
+    typedef uint32 pointerSizedUint;
 #endif
 
 #endif //AVRS_CORE_PRIMITIVE_TYPES_H

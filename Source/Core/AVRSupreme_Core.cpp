@@ -2,4 +2,5 @@
 
 namespace avrs
 {
+    #include "Native/Debug_Windows.cpp"
 }

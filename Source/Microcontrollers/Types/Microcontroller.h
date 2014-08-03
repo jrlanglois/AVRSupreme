@@ -4,34 +4,28 @@
 class Microcontroller
 {
 public:
-    Microcontroller()
-    {
-    }
+    Microcontroller();
 
-    virtual ~Microcontroller()
-    {
-    }
+    virtual ~Microcontroller();
 
     //==============================================================================
     struct Description
     {
     public:
-        Description()
-        {
-        }
+        Description();
 
-        Description (const Description& other)
-        {
-        }
+        Description (const Description& other);
+
+        //==============================================================================
+        Description& operator= (Description& other);
 
         //==============================================================================
         enum Type
         {
-            Flash = 0,
-            EEPROM
+            Flash = 0,          //<
+            EEPROM              //<
         };
 
-        //==============================================================================
         Type type;
 
         bool isPaged;
@@ -45,9 +39,6 @@ public:
 
         int minWriteDelay;      //< In microseconds
         int maxWriteDelay;      //< In microseconds
-
-    private:
-        //==============================================================================
     };
 
     //==============================================================================
@@ -62,9 +53,8 @@ public:
 
     virtual std::string shutdown() = 0;
 
-    virtual void calibrate()
-    {
-    }
+    //==============================================================================
+    virtual void calibrate();
 
 protected:
     //==============================================================================

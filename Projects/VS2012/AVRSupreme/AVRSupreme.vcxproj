@@ -227,6 +227,9 @@
     <ClCompile Include="..\..\..\Source\Microcontrollers\Native\SerialPort_Windows.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Microcontrollers\Types\Microcontroller.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\avrdude\avrdude\arduino.h">
@@ -370,6 +373,9 @@
     <ClInclude Include="..\..\..\Source\Core\Memory\ContainerDeletePolicy.h" />
     <ClInclude Include="..\..\..\Source\Core\Memory\Misc.h" />
     <ClInclude Include="..\..\..\Source\Core\Memory\ScopedPointer.h" />
+    <ClInclude Include="..\..\..\Source\Core\Native\Debug_Windows.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\..\..\Source\Microcontrollers\AVRSupreme_Microcontrollers.h" />
     <ClInclude Include="..\..\..\Source\Microcontrollers\Misc\SerialPort.h" />
     <ClInclude Include="..\..\..\Source\Microcontrollers\Types\Microcontroller.h" />
